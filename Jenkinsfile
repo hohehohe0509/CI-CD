@@ -19,6 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo '🔹 執行模擬測試'
+                sh 'chmod +x ./test_hello.sh'
                 sh './test_hello.sh'
             }
         }
@@ -26,6 +27,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo '🔹 執行小程式'
+                sh 'chmod +x ./hello.py'
                 sh 'python3 hello.py'
             }
         }
