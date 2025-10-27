@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                echo '🔹 執行小程式'
+                echo '🔹 執行程式'
                 sh 'chmod +x ./hello.py'
                 sh 'python3 hello.py'
             }
